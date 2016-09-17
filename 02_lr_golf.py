@@ -7,7 +7,7 @@ display_iteration = 1000
 
 x_data = []
 y_data = []
-for i in xrange(n):
+for i in range(n):
     # putts
     x1 = np.random.normal(36.0, 3.0)
     # score
@@ -40,7 +40,7 @@ with tf.Session() as sess:
     init = tf.initialize_all_variables()
     sess.run(init)
 
-    for step in xrange(iterations):
+    for step in range(iterations):
 
         _W, _par, _putt_par, _loss = sess.run([W, par, putt_par, loss])
         _, summary = sess.run([train, merged])
